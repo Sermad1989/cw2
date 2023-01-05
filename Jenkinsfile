@@ -28,10 +28,7 @@ node{
     stage('Deploy image'){
         sshagent(['my-ssh-key']) {
              sh 'docker pull salkassab89/cw2:1.0'
-        }
-        
-        ssh ubuntu@172.31.20.155 ansible-playbook update_version.yml
-        
+        }       
 
     }
 }
