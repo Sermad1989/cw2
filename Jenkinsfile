@@ -31,7 +31,7 @@ node{
         }
         
         sshagent(['my-ssh-key']) {
-             sh 'kubectl set image deployments/kubernetes-bootcamp cw2=jocatalin/kubernetes-bootcamp:v2'
+             sh 'ansible-playbook update_version.yml'
         }
 
     }
