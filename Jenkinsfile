@@ -27,8 +27,8 @@ node{
     }
     stage('Deploy image'){
         sshagent(['my-ssh-key']) {
-             sh 'curl 10.104.150.27:30930'
-             sh 'kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/kubernetes-bootcamp:v3'
+             sh 'docker pull salkassab89/cw2:1.0'
+             sh 'kubectl set image deployments/kubernetes-bootcamp cw2=jocatalin/kubernetes-bootcamp:v4'
         }
     }
 }
