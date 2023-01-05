@@ -30,9 +30,8 @@ node{
              sh 'docker pull salkassab89/cw2:1.0'
         }
         
-        sshagent(['my-ssh-key']) {
-             sh 'ansible-playbook update_version.yml'
-        }
+        ssh ubuntu@ip-172-31-20-155 ansible-playbook update_version.yml
+        
 
     }
 }
