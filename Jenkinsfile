@@ -8,7 +8,7 @@ node{
 
     stage('Build image'){
     
-        app = docker.build("salkassab89/cw2")
+        app = docker.build('salkassab89/cw2:1.0')
     }
 
     stage('Test image'){
