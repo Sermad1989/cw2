@@ -25,4 +25,10 @@ node{
              app.push("latest")
         }
     }
+    stage('Deploy image'){
+        sshagent(['my-ssh-key') {
+             sh 'curl $(minikube ip):30930'
+             sh 'kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/kubernetes-bootcamp:v3'
+        }
+    }
 }
