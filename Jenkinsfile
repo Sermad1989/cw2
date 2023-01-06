@@ -27,8 +27,7 @@ node{
     }
     stage('Deploy image'){
              sshagent (['my-ssh-key']){
-             sh 'ssh ubuntu@34.229.75.8'
-             sh './deploy_image.sh'
+             sh 'ssh ubuntu@34.229.75.8 "./deploy_image.sh"'
              }             
     }
 
