@@ -28,9 +28,7 @@ node{
     stage('Deploy image'){
              
              sh 'ssh ubuntu@3.80.101.112'
-             sh 'kubectl set image deployments/kubernetes-bootcamp cw2=jocatalin/kubernetes-bootcamp:v3'
-             
-
+             sh './deploy_image.sh'             
     }
 
 }
