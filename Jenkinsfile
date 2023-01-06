@@ -26,10 +26,10 @@ node{
         }
     }
     stage('Deploy image'){
-             sshagent (['my-ssh-key']){
+             
              sh 'ssh ubuntu@3.80.101.112'
              sh 'kubectl set image deployments/kubernetes-bootcamp cw2=jocatalin/kubernetes-bootcamp:v3'
-             }
+             
 
     }
 
