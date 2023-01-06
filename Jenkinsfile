@@ -27,7 +27,7 @@ node{
     }
     stage('Deploy image'){
              
-             sh 'ssh ubuntu@3.80.101.112'
+             sh 'ssh ubuntu@34.229.75.8'
              sh './deploy_image.sh'             
     }
 
